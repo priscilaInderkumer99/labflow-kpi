@@ -150,7 +150,7 @@ El repositorio aplica a sí mismo las métricas de un analista funcional. Se rec
 
 ## Qué aprendí
 
-_Completá esta sección al cerrar la v1.0: qué requerimiento cambió y por qué, qué defecto te enseñó más, qué harías distinto._
+_Completar
 
 ## Licencia
 

@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+.idea/
+.vscode/
+
+# Datos sintéticos generados (se regeneran con `make data`)
+data/synthetic/*
+!data/synthetic/.gitkeep
+reports/*
+!reports/.gitkeep

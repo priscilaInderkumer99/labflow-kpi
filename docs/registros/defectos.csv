@@ -1,0 +1,9 @@
+defecto_id,titulo,req_id,severidad,detectado_en,version,estado
+DEF-001,TAT por etapa promediaba intentos en lugar de sumarlos por muestra,REQ-004,Media,desarrollo,v0.5,Cerrado
+DEF-002,El backlog omitía las etapas con 0 muestras,REQ-009,Baja,desarrollo,v0.5,Cerrado
+DEF-003,La custodia contaba huecos por evento y no por muestra,REQ-010,Alta,UAT,v0.8,Cerrado
+DEF-004,El SLA ignoraba las muestras abiertas ya vencidas (sesgo de supervivencia),REQ-003,Alta,post-release,v0.5,Cerrado
+DEF-005,Las métricas del dashboard no mostraban unidades,REQ-016,Media,UAT,v0.8,Cerrado
+DEF-006,La completitud de metadatos contaba la columna sample_id,REQ-011,Baja,desarrollo,v0.5,Cerrado
+DEF-007,El QC de primera vez incluía reintentos,REQ-007,Media,desarrollo,v0.5,Cerrado
+DEF-008,El chequeo de solapamiento daba falsos positivos con etapas en curso,REQ-013,Baja,desarrollo,v0.8,Cerrado

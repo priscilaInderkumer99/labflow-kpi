@@ -1,0 +1,5 @@
+cr_id,fecha,req_id,tipo,descripcion,motivo,estado
+CR-001,2026-11-23,REQ-015,Agregado,"Agregar requisito de privacidad: solo seudónimos, sin columnas de datos personales",Detectado en la revisión del modelo de datos: el repositorio será público,Aprobado
+CR-002,2026-11-30,REQ-003,Modificado,El SLA cuenta como incumplidas las muestras abiertas ya vencidas,Sesgo de supervivencia detectado tras el release v0.5 (ver DEF-004 y ADR-0003),Aprobado
+CR-003,2026-12-02,REQ-019,Agregado,Exportar a CSV las muestras con custodia incompleta,"Pedido del responsable de calidad; prioridad Could, queda en backlog",Aprobado
+CR-004,2026-12-05,REQ-020,Agregado,Integrar con un LIMS productivo,"Pedido del director; requiere accesos y datos reales, fuera del alcance de v1",Rechazado

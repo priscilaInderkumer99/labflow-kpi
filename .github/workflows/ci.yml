@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Instalar
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: ruff check src tests dashboard
+      - name: Generar datos sintéticos
+        run: python -m labflow.cli generate
+      - name: Validar calidad de datos
+        run: python -m labflow.cli validate
+      - name: Calcular KPIs
+        run: python -m labflow.cli kpis
+      - name: Pruebas (incluye trazabilidad RTM y dashboard)
+        run: pytest --junitxml=reports/junit.xml
+      - name: Métricas del proyecto
+        run: python -m labflow.cli project-metrics
+      - uses: actions/upload-artifact@v4
+        with:
+          name: metricas-${{ matrix.python-version }}
+          path: |
+            docs/METRICAS_DEL_PROYECTO.md
+            reports/junit.xml

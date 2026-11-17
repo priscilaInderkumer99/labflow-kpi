@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labflow-kpi"
+version = "0.1.0"
+description = "Seguimiento de muestras y KPIs para un laboratorio de secuenciación (datos sintéticos)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["pandas>=2.0", "numpy>=1.24"]
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.30"]
+dev = ["pytest>=7.4", "streamlit>=1.30", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

@@ -1,0 +1,21 @@
+req_id,titulo,prioridad,persona,kpi_id,baseline,estado,test_id,uat_id
+REQ-001,TAT mediana de entrega,Must,Director,KPI-01,v0.1,Implementado,tests/test_kpis.py::test_tat_median_and_p90,UAT-01
+REQ-002,TAT percentil 90,Must,Director,KPI-02,v0.1,Implementado,tests/test_kpis.py::test_tat_median_and_p90,UAT-01
+REQ-003,Cumplimiento de SLA (incluye abiertas vencidas),Must,Director,KPI-03,v0.1,Implementado,tests/test_kpis.py::test_sla_compliance_counts_open_late_samples,UAT-01
+REQ-004,TAT por etapa y cuello de botella,Must,Operaciones,KPI-12,v0.1,Implementado,tests/test_kpis.py::test_tat_by_stage_identifies_bottleneck,UAT-02
+REQ-005,Tasa de rechazo de muestras,Should,Calidad,KPI-04,v0.1,Implementado,tests/test_kpis.py::test_rejection_rate,UAT-03
+REQ-006,Tasa de repetición (rework),Should,Operaciones,KPI-05,v0.1,Implementado,tests/test_kpis.py::test_rework_rate,UAT-03
+REQ-007,QC de laboratorio aprobado a la primera,Must,Calidad,KPI-06,v0.1,Implementado,tests/test_kpis.py::test_first_pass_qc_rate,UAT-03
+REQ-008,Éxito del pipeline bioinformático,Should,Bioinformática,KPI-07,v0.1,Implementado,tests/test_kpis.py::test_pipeline_success_rate,UAT-04
+REQ-009,Backlog por etapa,Must,Operaciones,KPI-08,v0.1,Implementado,tests/test_kpis.py::test_backlog_by_stage,UAT-04
+REQ-010,Cadena de custodia completa,Must,Calidad,KPI-09,v0.1,Implementado,tests/test_custody_kpi.py::test_custody_completeness_reports_missing_samples;tests/test_custody_kpi.py::test_custody_is_100_percent_when_no_gaps,UAT-05
+REQ-011,Completitud de metadatos,Must,Calidad,KPI-10,v0.1,Implementado,tests/test_quality.py::test_metadata_completeness_kpi,UAT-05
+REQ-012,Tasa de error de reportes,Should,Calidad,KPI-11,v0.1,Implementado,tests/test_kpis.py::test_report_error_rate,UAT-06
+REQ-013,Validaciones automáticas de calidad de datos,Must,Calidad,—,v0.1,Implementado,tests/test_quality.py::test_quality_checks_pass_on_generated_data;tests/test_quality.py::test_quality_detects_duplicate_ids;tests/test_quality.py::test_quality_detects_inverted_dates,UAT-07
+REQ-014,Datos sintéticos reproducibles,Should,Equipo,—,v0.1,Implementado,tests/test_generator.py::test_generator_is_reproducible,N/A
+REQ-015,Sin datos personales reales (privacidad),Must,Calidad,—,v0.5,Implementado,tests/test_generator.py::test_generator_has_no_real_pii_columns,UAT-07
+REQ-016,Dashboard con una vista por persona,Must,Todos,—,v0.1,Implementado,tests/test_dashboard.py::test_dashboard_renders_each_persona_view,UAT-08
+REQ-017,Trazabilidad verificada por CI,Should,Equipo,—,v0.1,Implementado,tests/test_project_metrics.py::test_rtm_references_existing_tests,N/A
+REQ-018,Semáforo de KPIs contra objetivo,Should,Director,—,v0.1,Implementado,tests/test_kpis.py::test_kpi_snapshot_flags_alerts,UAT-06
+REQ-019,Exportar CSV de muestras con custodia incompleta,Could,Calidad,KPI-09,v0.5,Backlog,,
+REQ-020,Integración con un LIMS real,Won't,Director,—,v0.5,Descartado,,
